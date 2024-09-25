@@ -1,0 +1,14 @@
+### Create a new message
+POST http://localhost:8080/rooms/f47ac10b-58cc-4372-a567-0e02b2c3d479/messages
+Content-Type: application/json
+
+{
+  "type": "text",
+  "payload": {
+    "content": "yessssirrrrr!!"
+  },
+  "createdBy": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+}
+
+### Get all messages
+GET http://localhost:3000/messages

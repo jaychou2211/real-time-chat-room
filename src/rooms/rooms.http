@@ -1,0 +1,31 @@
+### Get room by hostId
+GET http://localhost:3000/rooms/by-host/6ca534e4-64dc-408e-b57d-17b9aef5adb0
+
+### Get room by id
+GET http://localhost:3000/rooms/c0ba4779-7e0d-46ad-8dd2-d9569be6c41f
+
+### Get memberIds by roomId
+GET http://localhost:8080/rooms/f47ac10b-58cc-4372-a567-0e02b2c3d479/members
+
+### Create a new room
+POST http://localhost:3000/rooms
+Content-Type: application/json
+
+{
+  "name": "一起來玩吧",
+  "hostId": "6ca534e4-64dc-408e-b57d-17b9aef5adb0"
+}
+
+### Join room
+POST http://localhost:3000/rooms/6ca534e4-64dc-408e-b57d-17b9aef5adb0/join
+Content-Type: application/json
+
+[
+  {
+    "id": "ae0c5c32-a0d3-4928-a79e-4419b69cdba4",
+    "relation": "member"
+  }
+]
+
+### Delete room by id
+DELETE http://localhost:3000/rooms/710d3200-1cc1-46fe-8380-395454b3649d

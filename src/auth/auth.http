@@ -1,0 +1,12 @@
+### Login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "William",
+  "password": "hashed_password_9"
+}
+
+### Get User Info
+GET http://localhost:3000/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwic3ViIjoiMiIsImlhdCI6MTcyNjIwMjYyMSwiZXhwIjoxNzI2Mjg5MDIxfQ.lkUNiTiAMw07s9sFn0sMWpoSmcN5JVuGpuJ1qwdz4_k

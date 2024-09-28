@@ -10,15 +10,15 @@ export interface Database {
   messages: MessagesTable
 }
 
-export const dialect = new PostgresDialect({
-  pool: new Pool({
-    database: process.env.DB_NAME || 'test',
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'pizza',
-    password: process.env.DB_PASSWORD || '123456',
-    port: parseInt(process.env.DB_PORT || '5435'),
-    max: 10,
-  })
-})
+// export const dialect = new PostgresDialect({
+//   pool: new Pool({
+//     database: process.env.DB_NAME || 'test',
+//     host: process.env.DB_HOST || 'localhost',
+//     user: process.env.DB_USER || 'pizza',
+//     password: process.env.DB_PASSWORD || '123456',
+//     port: parseInt(process.env.DB_PORT || '5435'),
+//     max: 10,
+//   })
+// })
 
 export type DbConnection = Kysely<Database>;

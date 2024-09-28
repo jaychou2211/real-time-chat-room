@@ -1,4 +1,4 @@
-version: '3.8'
+name: chat_app
 
 services:
   nginx:
@@ -44,7 +44,7 @@ services:
     ports:
       - "5436:5432"
     volumes:
-      - postgres_data_room:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   redis:
@@ -56,5 +56,5 @@ services:
       - redis_data:/data
 
 volumes:
-  postgres_data_room:
+  postgres_data:
   redis_data:

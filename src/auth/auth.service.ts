@@ -33,7 +33,8 @@ export class AuthService {
     const user = await this.usersService.findOneByUsername(username);
 
     if (user && user.password === password) {
-      return this.signIn(user);
+      const { password, ...result } = user;
+      return result;
     }
 
     return null;

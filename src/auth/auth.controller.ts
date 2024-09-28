@@ -13,7 +13,7 @@ export class AuthController {
   @Post('login')
   @UseGuards(PassportLocalGuard)
   async login(@Request() request) {
-    return request.user;
+    return this.authService.signIn(request.user);
   }
 
   @Get('me')
